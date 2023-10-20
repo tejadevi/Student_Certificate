@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="javascript" href="script.js">
+    <title>Student-Teacher Relationship</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h3>Select a Student:</h3>
+        <select id="studentDropdown">
+            <!-- Student names will be populated from JS -->
+        </select>
+
+        <!-- Fields to add a new student and teacher -->
+        <div id="addStudentFields" style="display:none;">
+            <input type="text" id="newStudentName" placeholder="Student Name">
+            <input type="text" id="assignedTeacherName" placeholder="Assigned Teacher Name">
+            <button id="addStudentBtn">Add Student</button>
+        </div>
+
+        <h3>Teachers:</h3>
+        <div id="teacherDisplay"></div>
+
+        <!-- Generate Certificate Button -->
+        <button id="generateCertificateBtn" disabled>Generate Certificate</button>
+
+        <!-- Dummy Certificate Display Area -->
+        <div id="certificate" style="display:none;">
+            <div class="certificate-border">
+                <h2>Certificate of Achievement</h2>
+                <p>This is to certify that Mr</p>
+                <h3 id="certStudentName"></h3>
+                <p>has successfully completed the course conducted by</p>
+                <h3 id="certTeacherName"></h3>
+                <p>Given this day of <span id="certDate"></span>.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
